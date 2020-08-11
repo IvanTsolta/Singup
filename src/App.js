@@ -1,4 +1,8 @@
+ task/SUP-3-API
 import React, { useState,useEffect } from "react";
+
+import React, { useState } from "react";
+ master
 import "./App.css";
 import axios from "axios";
 
@@ -34,6 +38,7 @@ export default function App(props) {
     password: "",
   });
 
+ task/SUP-3-API
   axios
   .get("http://localhost:3001/posts")
   .then((res) => {
@@ -43,6 +48,7 @@ export default function App(props) {
     console.log(err);
   });
  
+ master
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -54,6 +60,7 @@ export default function App(props) {
         Last Name: ${lastName}
         Email: ${email}
         Password: ${password}
+ task/SUP-3-API
       `)
       axios
           .post(`http://localhost:3001/posts`, {firstName, lastName, email,password} )
@@ -61,6 +68,9 @@ export default function App(props) {
             console.log(res);
             console.log(res.data);
           });
+
+      `);
+ master
     } else {
       console.error("FORM INVALID - DISPLAY ERROR MESSAGE");
     }
