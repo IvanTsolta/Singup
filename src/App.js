@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./App.css";
+import axios from "axios";
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -33,6 +34,15 @@ export default function App(props) {
     password: "",
   });
 
+  axios
+  .get("http://localhost:3001/posts")
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+ 
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -44,7 +54,13 @@ export default function App(props) {
         Last Name: ${lastName}
         Email: ${email}
         Password: ${password}
-      `);
+      `)
+      axios
+          .post(`http://localhost:3001/posts`, {firstName, lastName, email,password} )
+          .then((res) => {
+            console.log(res);
+            console.log(res.data);
+          });
     } else {
       console.error("FORM INVALID - DISPLAY ERROR MESSAGE");
     }
