@@ -1,5 +1,10 @@
+ task/SUP-3-API
+import React, { useState,useEffect } from "react";
+
 import React, { useState } from "react";
+ master
 import "./App.css";
+import axios from "axios";
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -33,6 +38,17 @@ export default function App(props) {
     password: "",
   });
 
+ task/SUP-3-API
+  axios
+  .get("http://localhost:3001/posts")
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+ 
+ master
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -44,7 +60,17 @@ export default function App(props) {
         Last Name: ${lastName}
         Email: ${email}
         Password: ${password}
+ task/SUP-3-API
+      `)
+      axios
+          .post(`http://localhost:3001/posts`, {firstName, lastName, email,password} )
+          .then((res) => {
+            console.log(res);
+            console.log(res.data);
+          });
+
       `);
+ master
     } else {
       console.error("FORM INVALID - DISPLAY ERROR MESSAGE");
     }
