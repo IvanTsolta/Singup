@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "Mael",
+      "lastName": "Johnson",
+      "email": "mg@mg.com"
+    },
+    {
+      "firstName": "fdfdffdf",
+      "lastName": "fdfdfdf",
+      "email": "tcolta2000@gmail.com",
+      "id": 2
+    },
+    {
+      "firstName": "tdgdfdfdfd",
+      "lastName": "fdfdfdfdfd",
+      "email": "tcolta2000@gmail.com",
+      "id": 3
+    },
+    {
+      "firstName": "Arturmiycotyk",
+      "lastName": "Yatebelybly",
+      "email": "tcolta2000@gmail.com",
+      "id": 4
+    },
+    {
+      "firstName": "Artur",
+      "lastName": "Kit",
+      "email": "tcolta2000@gmail.com",
+      "password": "Ятебелюблю",
+      "id": 5
+    }
+  ]
+}
