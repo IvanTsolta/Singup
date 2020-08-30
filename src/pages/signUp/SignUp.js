@@ -35,10 +35,7 @@ const SignUp = ({name, setName, surname, setSurname, email, setEmail, password, 
                         })
                     }
                 })
-                // .catch(err => {
-                //     setErrorMsg('smth went wrong (fetching users)');
-                //     setSuccess(false)
-                // });
+                
     }
 
     return (<Container maxWidth='md' style={{height: '100vh'}}>
