@@ -8,6 +8,7 @@ import {noDigit,nonEmpty, validEmail} from "../../data/validators/validators";
 import UsersAPI from "../../data/api/UsersAPI";
 import AuthAPI from "../../data/api/AuthAPI";
 
+
 const SignUp = ({name, setName, surname, setSurname, email, setEmail, password, setPassword}) => {
 
     const [errorMsg, setErrorMsg] = useState(null);
@@ -49,6 +50,7 @@ const SignUp = ({name, setName, surname, setSurname, email, setEmail, password, 
                     value={name}
                     error={nameError}
                     helperText={nameError}
+                    variant="outlined"
                     onChange={e => setName(e.target.value)}
                 />
                 <TextField
@@ -57,6 +59,7 @@ const SignUp = ({name, setName, surname, setSurname, email, setEmail, password, 
                     value={surname}
                     error={surnameError}
                     helperText={surnameError}
+                    variant="outlined"
                     onChange={e => setSurname(e.target.value)}
                 />
                 <TextField
@@ -65,6 +68,7 @@ const SignUp = ({name, setName, surname, setSurname, email, setEmail, password, 
                     value={email}
                     error={emailError}
                     helperText={emailError}
+                    variant="outlined"
                     onChange={e => setEmail(e.target.value)}
                 />
                 <TextField
@@ -73,14 +77,14 @@ const SignUp = ({name, setName, surname, setSurname, email, setEmail, password, 
                     value={password}
                     error={passwordError}
                     helperText={passwordError}
+                    variant="outlined"
                     onChange={e => setPassword(e.target.value)}
                 />
                 <Button onClick={onSignUp}
-                        fullWidth>Sign up</Button>
+                        fullWidth
+                        variant= "outlined" color="secondary">Sign up</Button>
             </Grid>
         </Grid>
     </Container>);
 };
-
-
 export default SignUp;
